@@ -1,6 +1,5 @@
-import "./App.css"
 import { GoSearch } from "react-icons/go"
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import "./index.css"
 import ListMovie from "./component/listFilm"
 import logo from "./asset/logo.png"
