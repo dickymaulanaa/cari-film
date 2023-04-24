@@ -29,24 +29,33 @@ const SearchFilm = ({ dataSearch, loading }) => {
             showSkeleton()
           ) : (
             <>
-              {dataSearch.map((el, i) => {
-                return (
-                  <div className="d-flex flex-column movie-wrap shadow">
-                    <img
-                      src={
-                        el.poster_path === null
-                          ? "https://feb.kuleuven.be/drc/LEER/visiting-scholars-1/image-not-available.jpg/image"
-                          : `https://image.tmdb.org/t/p/w500/${el.poster_path}`
-                      }
-                      alt=""
-                      className="movie-img "
-                    />
-                    <div className="mt-3 d-flex justify-content-center ">
-                      <h5 className="w-75 text-center ">{el.title}</h5>
-                    </div>
-                  </div>
-                )
-              })}{" "}
+              {dataSearch.length === 0 ? (
+                <>
+                  {" "}
+                  <div style={{ height: "500px" }}>Movie not Found</div>
+                </>
+              ) : (
+                <>
+                  {dataSearch.map((el, i) => {
+                    return (
+                      <div className="d-flex flex-column movie-wrap shadow">
+                        <img
+                          src={
+                            el.poster_path === null
+                              ? "https://feb.kuleuven.be/drc/LEER/visiting-scholars-1/image-not-available.jpg/image"
+                              : `https://image.tmdb.org/t/p/w500/${el.poster_path}`
+                          }
+                          alt=""
+                          className="movie-img "
+                        />
+                        <div className="mt-3 d-flex justify-content-center ">
+                          <h5 className="w-75 text-center ">{el.title}</h5>
+                        </div>
+                      </div>
+                    )
+                  })}{" "}
+                </>
+              )}
             </>
           )}
         </div>
