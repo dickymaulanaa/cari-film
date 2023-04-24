@@ -1,0 +1,22 @@
+@import "react-loading-skeleton/dist/skeleton.css";
+
+.movie-wrap {
+  width: 400px;
+  height: 630px;
+  /* background-color: #f8f1f1; */
+}
+.movie-img {
+  width: 400px;
+  height: 550px;
+}
+.btn-country {
+  width: 100px;
+}
+.btn-country:focus {
+  background-color: #dc3545 !important;
+  color: white;
+}
+.form-control:focus {
+  border: 1px solid red !important;
+  box-shadow: none !important;
+}
